@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Admob-Ads"
+rootProject.name = "GMA Next-Gen Ads"
 include(":app")
 include(":gmaAds-nextGen")
 include(":data")
