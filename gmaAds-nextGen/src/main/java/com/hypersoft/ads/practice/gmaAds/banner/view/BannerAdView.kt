@@ -32,6 +32,12 @@ class BannerAdView @JvmOverloads constructor(
         val heightPx = adSize?.getHeightInPixels(context) ?: 0
         if (widthPx > 0) minimumWidth = widthPx
         if (heightPx > 0) minimumHeight = heightPx
+        if (heightPx > 0 && adSize?.isInlineAdaptiveBanner != true) {
+            // A re-attached cached banner is not re-measured after the loading placeholder,
+            // so pin the container to the banner height instead of relying on wrap_content.
+            // Inline adaptive banners vary in height, so they keep wrap_content.
+            layoutParams = layoutParams.apply { height = heightPx }
+        }
         adView.visibility = VISIBLE
         addView(
             adView,
