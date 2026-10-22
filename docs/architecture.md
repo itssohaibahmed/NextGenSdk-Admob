@@ -40,8 +40,8 @@ Entrance starts Remote Config and does not wait for it. Consent is capped at 8 s
 - New feature UI belongs in fragments, not in `MainActivity` beyond the nav host.
 - Fragments extend `BaseFragment` (`:app`). ViewBinding lifecycle lives in `ParentFragment` (`:core`).
 - Do not inject `AdsManager` in screen fragments. Load/show ads through Fragment/Activity extensions (`loadAppOpenAd` / `showAppOpenAd` / `showAppOpenOrInterstitialAd`, `loadBannerAd(key, container)`, `loadInterstitialAd` / `showInterstitialAd`, `loadNativeAd` / `showNativeAd`, `loadRewardedAd` / `showRewardedAd`, `loadRewardedInterstitialAd` / `showRewardedInterstitialAd`).
-- Ads live in the `:gmaAds` module and are invoked from fragments/activity as needed; they do not own navigation. `AppOpenLoadingActivity` is an ads overlay in `:gmaAds`, not an app funnel screen.
-- How ads work, and how to add or remove a placement for every format, is in `gmaAds/README.md`. Do not duplicate that catalog here.
+- Ads live in the `:gmaAds-nextGen` module and are invoked from fragments/activity as needed; they do not own navigation. `AppOpenLoadingActivity` is an ads overlay in `:gmaAds-nextGen`, not an app funnel screen.
+- How ads work, and how to add or remove a placement for every format, is in `gmaAds-nextGen/README.md`. Do not duplicate that catalog here.
 - Shared helpers live in the `:core` module (`Constants`, `platform.InternetManager`).
 - Persistence and Remote Config live in the `:data` module (`SharedPrefManager` local, `RemoteConfigDataSource` remote). Fetch RC into SharedPreferences; do not read Firebase keys directly from UI.
 - Dependency injection is **Koin** (`lazyModule` per feature/module, started from `App`). Do not add a service locator on `Application`.

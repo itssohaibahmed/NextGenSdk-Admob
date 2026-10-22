@@ -247,7 +247,7 @@ dependencies {
 | `:data`          | projects → Android Core → Google → Firebase (`firebase-config` + BOM) → Koin → Kotlin Coroutines (`play-services` for `await()`)             |
 | `:core-ui`       | projects → Android Core → Splash → Lifecycle → Navigation → Google → Firebase → Koin → Glide                                                 |
 | `:core-platform` | projects → Android Core → Firebase (BOM + analytics/crashlytics/`firebase-messaging` mandatory) → Koin → Kotlin Coroutines (`play-services`) |
-| `:gmaAds`        | projects → Android Core → Lifecycle → Google (`api` ads) → Koin                                                                              |
+| `:gmaAds-nextGen`        | projects → Android Core → Lifecycle → Google (`api` ads) → Koin                                                                              |
 | `:domain`        | Coroutines + Koin DSL for `useCaseModule` (+ optional pure `project(":feature-*")`)                                                          |
 
 ### Scopes while organizing

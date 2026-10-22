@@ -24,6 +24,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Admob-Ads"
 include(":app")
-include(":gmaAds")
+include(":gmaAds-nextGen")
 include(":data")
 include(":core")

@@ -286,6 +286,6 @@ Never log purchase tokens or PII.
 
 **Console:** Option 1 IDs, trial offers active, license testers, in-app products created
 
-**Code:** `BillingProductIds` single source, singleton + Application connect, offerId in purchase calls, ads gated, `adsManager.destroyCachedAds()` from `:app` after `isAppPurchased = true` (not from `:data` — see `gmaAds/README.md` Paid user), fake purchase debug only, strings in `:core-ui`, portrait + landscape
+**Code:** `BillingProductIds` single source, singleton + Application connect, offerId in purchase calls, ads gated, `adsManager.destroyCachedAds()` from `:app` after `isAppPurchased = true` (not from `:data` — see `gmaAds-nextGen/README.md` Paid user), fake purchase debug only, strings in `:core-ui`, portrait + landscape
 
 **QA:** Trial sheet matches UI, restore works, cancel no error toast

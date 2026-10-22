@@ -12,7 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/gmaAds" />
+            <option value="$PROJECT_DIR$/gmaAds-nextGen" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -34,7 +34,7 @@ Obey `.cursor/project-settings.json`: if `writeTestsWithFeatures` is `false`, on
 ## Priority
 
 1. **UseCases** — fake domain repositories, JVM tests
-2. **ViewModels** — Intents → State + Effects (**feature** screens). Skip converting `:gmaAds` / ads ViewModels to MVI tests unless the user **explicitly** asks
+2. **ViewModels** — Intents → State + Effects (**feature** screens). Skip converting `:gmaAds-nextGen` / ads ViewModels to MVI tests unless the user **explicitly** asks
 3. **Mappers** — pure Kotlin when non-trivial
 4. **Flow / coroutine behavior** — UseCase or repository APIs that return `Flow` / use `withContext`, still with **fakes** (no real network/DB)
 

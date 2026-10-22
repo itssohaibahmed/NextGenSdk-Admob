@@ -28,7 +28,7 @@ Companion to [SKILL.md](SKILL.md). Target architecture: [setup-new-project](../s
 | Themes/colors in `:app`                                  | Move to `:core-ui`. Honor `themeModes`.                                                                             |
 | Firebase Analytics/Crashlytics/RC                        | Relocate to `:core-platform` / `:data` as in setup-new-project. Keep event names and RC keys.                       |
 | `FirebaseMessagingService` / token UI                    | **Keep.** Only add the messaging dependency if FCM was missing.                                                     |
-| AdMob / mediation / `:gmaAds`                            | Keep architecture. Relocate module if ads live in `:app`. Not MVI.                                                  |
+| AdMob / mediation / `:gmaAds-nextGen`                            | Keep architecture. Relocate module if ads live in `:app`. Not MVI.                                                  |
 | Play Billing                                             | Keep purchase flow; domain interface + `:data` impl if extracting.                                                  |
 | `google-services.json` / `google-services` plugin        | Stay on `:app`.                                                                                                     |
 | ProGuard / R8 keep rules                                 | Keep; point at new class names after moves.                                                                         |

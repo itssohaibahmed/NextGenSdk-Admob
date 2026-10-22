@@ -10,8 +10,6 @@ import com.hypersoft.ads.practice.gmaAds.common.extensions.destroyBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadInterstitialAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadNativeAd
-import com.hypersoft.ads.practice.gmaAds.common.extensions.pauseBannerAd
-import com.hypersoft.ads.practice.gmaAds.common.extensions.resumeBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.showInterstitialAd
 import com.hypersoft.ads.practice.gmaAds.interstitial.InterstitialAdKey
 import com.hypersoft.ads.practice.gmaAds.nativeAd.NativeAdKey
@@ -23,16 +21,6 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>(FragmentOnboa
         loadAds()
 
         binding.btnContinueOnboarding.setOnClickListener { showInterstitialAd(InterstitialAdKey.ON_BOARDING) { navigateScreen() } }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        resumeBannerAd(BannerAdKey.ON_BOARDING)
-    }
-
-    override fun onPause() {
-        pauseBannerAd(BannerAdKey.ON_BOARDING)
-        super.onPause()
     }
 
     private fun loadAds() {

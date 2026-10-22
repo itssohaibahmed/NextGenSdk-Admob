@@ -26,7 +26,7 @@ Obey `.cursor/project-settings.json` when judging orientation / tests.
 
 ### MVI
 
-- [ ] Intent / State / Effect / ViewModel pattern on **feature screens** — skip `:gmaAds` / existing ad ViewModels / ads managers (not MVI unless the user asked to convert)
+- [ ] Intent / State / Effect / ViewModel pattern on **feature screens** — skip `:gmaAds-nextGen` / existing ad ViewModels / ads managers (not MVI unless the user asked to convert)
 - [ ] `handleIntent` single launch + `suspend` `onX` handlers; `handleError` at end of ViewModel
 - [ ] Navigation via Effects — not NavController in ViewModel
 - [ ] No mutable state exposed publicly

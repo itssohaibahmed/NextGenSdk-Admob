@@ -119,7 +119,7 @@ Then migrate using [migration.md](migration.md). Prefer the detect → action ta
 Follow `08-gradle.mdc` + [reference/gradle.md](../../../rules/reference/gradle.md) and **`gradle-organize`**.
 
 1. Groovy → Kotlin DSL if needed (`settings.gradle.kts`, module scripts, catalog).
-2. `include` the mandatory module set from `setup-new-project` (`:app`, `:domain`, `:data`, `:presentation`, `:core-common`, `:core-ui`, `:core-platform`; keep `:gmaAds` / extra modules if they already exist).
+2. `include` the mandatory module set from `setup-new-project` (`:app`, `:domain`, `:data`, `:presentation`, `:core-common`, `:core-ui`, `:core-platform`; keep `:gmaAds-nextGen` / extra modules if they already exist).
 3. Move existing dependencies into `libs.versions.toml` **at the same versions**. Do not run a full `gradle-update` bump. Bump a library only if the new architecture cannot compile without it; tell the user what changed.
 4. View Binding on UI modules; Safe Args on `:presentation`. Remove Data Binding when replacing it with View Binding (keep layouts working).
 5. Preserve `signingConfigs`, `versionCode` / `versionName`, `applicationId`, existing `.jks` paths, `google-services.json`, ProGuard keep rules. Do not invent passwords.
@@ -158,7 +158,7 @@ Do not rewrite parsers, endpoints, headers, or DB queries.
 3. SharedPreferences: wrap the **existing** prefs file/name in `SharedPrefManager` (sync) + `SharedPrefRepository` (`26-data-persistence` + `reference/shared-preferences.md`). Do not change keys or defaults.
 4. Remote Config: if present, keep **existing keys**; wrap with DataSource + cache-to-prefs (`setup-new-project` Step 8 / `implement-firebase-remote-config`). If missing, add the template RC stack.
 5. Analytics: keep **event names and params**; move posting into `PlatformFirebase` + `EventsProvider`. Do not rename events.
-6. Ads: keep managers / ad ViewModels / mediation. Relocate to `:gmaAds` (or the existing ads module) if still inside `:app`. **Not** MVI unless the user explicitly asks (`21-ads-billing`).
+6. Ads: keep managers / ad ViewModels / mediation. Relocate to `:gmaAds-nextGen` (or the existing ads module) if still inside `:app`. **Not** MVI unless the user explicitly asks (`21-ads-billing`).
 7. Billing, maps, login SDKs, etc.: keep behavior; place per `02-project-structure`.
 
 Heavy mapping stays in Repository / UseCase — not in Fragments.
@@ -207,7 +207,7 @@ Dispatchers: register **without** `named("io")` / `named("default")`.
 
 - Use this skill on a greenfield app — use `setup-new-project`
 - Rewrite business logic, API parsing, or UI to “clean it up”
-- Convert ads (`:gmaAds`, AdMob managers, ad ViewModels) to MVI unless the user **explicitly** asks
+- Convert ads (`:gmaAds-nextGen`, AdMob managers, ad ViewModels) to MVI unless the user **explicitly** asks
 - Drop translations, change analytics event names, or rotate signing keys
 - Full dependency bump (`gradle-update`) unless required to compile
 - Add Compose / Data Binding / Hilt

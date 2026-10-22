@@ -1,6 +1,6 @@
 ---
 name: create-mvi
-description: Scaffold presentation-layer MVI only (Intent/State/Effect/ViewModel/Fragment/DI/nav). No domain or data. Use when adding a new screen with ViewModel under presentation. For new UseCases/repositories use create-clean-architecture. Do not use for ads / :gmaAds.
+description: Scaffold presentation-layer MVI only (Intent/State/Effect/ViewModel/Fragment/DI/nav). No domain or data. Use when adding a new screen with ViewModel under presentation. For new UseCases/repositories use create-clean-architecture. Do not use for ads / :gmaAds-nextGen.
 ---
 
 # Create MVI Feature (presentation only)
@@ -15,7 +15,7 @@ Obey `.cursor/project-settings.json` when present (`writeTestsWithFeatures`, `or
 - Confirm layouts exist (or run `figma-to-xml` / `create-dialog` / `create-bottom-sheet` first)
 - Read existing similar feature for patterns (base Fragment, DI module naming, nav)
 - If **new** domain capability is needed (new UseCase / repository / DataSource): run **`create-clean-architecture`** first (or after) — **do not** invent domain/data files inside this skill’s required path
-- **Do not** use this skill for ads / `:gmaAds` / AdMob. Ads keep the project’s existing managers / ad ViewModels (`21-ads-billing`) unless the user **explicitly** asks to convert ads to MVI
+- **Do not** use this skill for ads / `:gmaAds-nextGen` / AdMob. Ads keep the project’s existing managers / ad ViewModels (`21-ads-billing`) unless the user **explicitly** asks to convert ads to MVI
 
 ## Package layout (`:presentation` only)
 

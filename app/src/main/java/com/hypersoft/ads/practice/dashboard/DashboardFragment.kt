@@ -16,8 +16,6 @@ import com.hypersoft.ads.practice.gmaAds.common.extensions.destroyBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadAppOpenAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.loadInterstitialAd
-import com.hypersoft.ads.practice.gmaAds.common.extensions.pauseBannerAd
-import com.hypersoft.ads.practice.gmaAds.common.extensions.resumeBannerAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.showInterstitialAd
 import com.hypersoft.ads.practice.gmaAds.common.extensions.unblockAppOpen
 import com.hypersoft.ads.practice.gmaAds.interstitial.InterstitialAdKey
@@ -34,12 +32,6 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>(FragmentDashboa
     override fun onResume() {
         super.onResume()
         registerBackPress()
-        resumeBannerAd(BannerAdKey.DASHBOARD)
-    }
-
-    override fun onPause() {
-        pauseBannerAd(BannerAdKey.DASHBOARD)
-        super.onPause()
     }
 
     override fun onDestroyView() {

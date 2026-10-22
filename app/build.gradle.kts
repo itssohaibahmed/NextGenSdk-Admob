@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":gmaAds"))
+    implementation(project(":gmaAds-nextGen"))
     implementation(project(":data"))
     implementation(project(":core"))
 

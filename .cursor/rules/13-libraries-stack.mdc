@@ -21,7 +21,7 @@ alwaysApply: false
 
 ## Optional (add when feature requires — with approval)
 
-Lottie, CameraX, Play Services Location/Maps, other Firebase libs (Analytics, RC, Crashlytics, …), Play Billing / Hypersoft BillingManager, Google Mobile Ads + mediation (`:gmaAds`), Shimmer, App Update KTX.
+Lottie, CameraX, Play Services Location/Maps, other Firebase libs (Analytics, RC, Crashlytics, …), Play Billing / Hypersoft BillingManager, Google Mobile Ads + mediation (`:gmaAds-nextGen`), Shimmer, App Update KTX.
 
 ## Forbidden (unless project already uses or explicitly approved)
 

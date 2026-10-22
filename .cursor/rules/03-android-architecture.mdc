@@ -48,7 +48,7 @@ Dependencies always point inward.
 ## ViewModel
 
 - This MVI ViewModel contract applies to **feature screens** in `:presentation` only
-- Ads (`:gmaAds` / AdMob) keep existing managers / ad ViewModels — **not** Intent / State / Effect — unless the user **explicitly** asks (`21-ads-billing`)
+- Ads (`:gmaAds-nextGen` / AdMob) keep existing managers / ad ViewModels — **not** Intent / State / Effect — unless the user **explicitly** asks (`21-ads-billing`)
 - Extend `androidx.lifecycle.ViewModel`
 - Expose `StateFlow<*State>` and `SharedFlow<*Effect>`
 - Single entry: `fun handleIntent(intent: *Intent) = viewModelScope.launch(exceptionHandler) { … }`

@@ -8,12 +8,12 @@ Apply only when the project includes ads and/or IAP. Do not add these modules wi
 
 ## Ads are not MVI
 
-- Ads stay on the **project’s existing ads architecture** (`:gmaAds` managers, existing ad ViewModels, DataSources / Repositories / UseCases as already present)
+- Ads stay on the **project’s existing ads architecture** (`:gmaAds-nextGen` managers, existing ad ViewModels, DataSources / Repositories / UseCases as already present)
 - **Do not** apply MVI to ads: no `*Intent` / `*State` / `*Effect`, no `handleIntent`, no `create-mvi` for ads
 - When updating ads, adding placements, or doing ads work on user request: **match the current project ads code** — do not convert ads into feature MVI
 - Convert ads to MVI **only** if the user **explicitly** asks to do that
 
-## Ads module (e.g. `:gmaAds`)
+## Ads module (e.g. `:gmaAds-nextGen`)
 
 - Keep ads in a dedicated module with the project’s existing internal packages (managers, ad ViewModels, data/domain as already present)
 - Presentation may depend on the ads module; feature Fragments use existing managers / ad ViewModels — never raw AdMob SDK calls scattered in every screen
@@ -40,7 +40,7 @@ release { resValue("string", "admob_banner_home_id", "ca-app-pub-…") } // prod
 - Persist entitlement (e.g. `isAppPurchased`) in SharedPreferences / DataStore via repository
 - Premium screens follow normal MVI feature packages (`premium/`)
 - Product IDs: constants in data/domain — not duplicated in UI
-- After purchase success: save `isAppPurchased`, then `adsManager.destroyCachedAds()` from `:app` (not from `:data`). See `gmaAds/README.md` Paid user
+- After purchase success: save `isAppPurchased`, then `adsManager.destroyCachedAds()` from `:app` (not from `:data`). See `gmaAds-nextGen/README.md` Paid user
 - Full subs + in-app playbook: [reference/premium-billing.md](reference/premium-billing.md)
 - Skills: `premium/implement-in-app-billing`, `premium/add-subscription-packages`, `premium/add-inapp-packages`
 
